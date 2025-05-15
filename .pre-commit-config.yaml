@@ -1,4 +1,5 @@
-##COMMENT
+
+
 repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
   rev: v5.0.0
@@ -22,3 +23,10 @@ repos:
   hooks:
     - id: numpydoc-validation
       exclude: (tests|docs)/.*
+- repo: local
+  hooks:
+    - id: validate-filename
+      name: Validate SSL Verify
+      description: This hook checks filename length.
+      entry: validate-filename
+      language: python
